@@ -54,10 +54,13 @@ int main(int argc, char *argv[]) {
 
 	//free up memory
 	free(prod);
-  prod = NULL;
+	prod = NULL;
 
 	free(cons);
-  cons = NULL;
+	cons = NULL;
+
+	free(buffer);
+	buffer = NULL;
 
 	return 0;
 }
