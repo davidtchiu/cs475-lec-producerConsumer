@@ -25,11 +25,11 @@ int main(int argc, char *argv[]) {
 
 	//initialize shared data
 	current_size = 0;
-	buffer = (int*) malloc(sizeof(int) * BUFFER_SIZE);
+	buffer = malloc(sizeof(int) * BUFFER_SIZE);
 
 	//create consumer and producer threads
-	pthread_t *prod = (pthread_t*) malloc(NUM_THREADS * sizeof(pthread_t));
-	pthread_t *cons = (pthread_t*) malloc(NUM_THREADS * sizeof(pthread_t));
+	pthread_t *prod = malloc(NUM_THREADS * sizeof(pthread_t));
+	pthread_t *cons = malloc(NUM_THREADS * sizeof(pthread_t));
 
 	for (int i = 0; i < NUM_THREADS; i++) {
 		pthread_create(&prod[i], NULL, producer, NULL);
